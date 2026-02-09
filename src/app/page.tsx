@@ -251,14 +251,6 @@ export default function Home() {
 
       <section className="relative px-6 pb-24 pt-24 sm:px-10 z-10 bg-[var(--mfh-bg)]/95 backdrop-blur-sm">
         <div className="relative mx-auto w-full max-w-5xl rounded-3xl bg-[var(--mfh-stone)]/70 p-10 text-center sm:p-16">
-          <Image
-            src="/human-dilemma.png"
-            alt="Human dilemma"
-            width={80}
-            height={80}
-            className="absolute -top-8 -right-8 h-16 w-16 rounded-full object-cover border-4 border-[var(--mfh-stone)]/70 sm:-top-10 sm:-right-10 sm:h-20 sm:w-20"
-            unoptimized
-          />
           <motion.h2
             className="mfh-heading text-3xl font-semibold sm:text-4xl"
             initial={{ opacity: 0, y: 20 }}

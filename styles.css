@@ -84,6 +84,12 @@ body {
     flex-wrap: nowrap;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .brand {
     display: flex;
     align-items: center;
@@ -361,6 +367,13 @@ section {
     color: var(--text-light);
 }
 
+/* Accordion cards side by side on desktop */
+.accordion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
 .dilemma {
     background: var(--bg-light);
 }
@@ -545,6 +558,11 @@ details[open] > .accordion-header .accordion-icon::after {
     color: var(--white);
 }
 
+.core *:focus,
+.core *:focus-visible {
+    outline: none;
+}
+
 .core .section-header h2 {
     color: var(--white);
 }
@@ -555,7 +573,6 @@ details[open] > .accordion-header .accordion-icon::after {
 
 .solution-paragraph {
     font-size: 1.2rem;
-    font-style: italic;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.8;
     margin-top: 1rem;
@@ -672,6 +689,10 @@ details[open] > .accordion-header .accordion-icon::after {
 }
 
 @media (max-width: 768px) {
+    .accordion-grid {
+        grid-template-columns: 1fr;
+    }
+
     .nav-content {
         justify-content: space-between;
     }
