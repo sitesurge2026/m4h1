@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --mfh-bg: #f9f8f3;
+  --mfh-text: #1c1c1e;
+  --mfh-accent: #40516a;
+  --mfh-accent-dark: #242d3d;
+  --mfh-accent-darker: #0b132b;
+  --mfh-stone: #e8e5df;
+}
+
+@theme inline {
+  --color-background: var(--mfh-bg);
+  --color-foreground: var(--mfh-text);
+  --font-sans: var(--font-figtree);
+}
+
+body {
+  background: var(--mfh-bg);
+  color: var(--mfh-text);
+  font-family: var(--font-figtree), system-ui, -apple-system, sans-serif;
+}
+
+.mfh-heading {
+  font-family: var(--font-figtree), system-ui, -apple-system, sans-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+}
+
+.scroll-indicator {
+  animation: float 2.8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.jump-animation {
+  animation: jump 1.5s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

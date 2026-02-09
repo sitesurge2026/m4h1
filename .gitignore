@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+
+# IDE / editor
+*.code-workspace
+.vscode/
+
+# Optional: uncomment if you use env files
+# .env
+# .env.local

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop vs Mobile Comparison</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .comparison-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        .version {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .version-header {
+            background: #40516a;
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .version iframe {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+        .desktop-version iframe {
+            height: 900px;
+        }
+        .mobile-version iframe {
+            height: 800px;
+            max-width: 375px;
+            margin: 0 auto;
+        }
+        @media (max-width: 1200px) {
+            .comparison-container {
+                flex-direction: column;
+            }
+            .mobile-version iframe {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="comparison-container">
+        <div class="version desktop-version">
+            <iframe src="index.html"></iframe>
+            <div class="version-header">Desktop Version</div>
+        </div>
+        <div class="version mobile-version">
+            <div class="version-header">Mobile Version</div>
+            <iframe src="index-mobile.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
